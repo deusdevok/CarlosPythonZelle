@@ -40,11 +40,13 @@
     * b) *Outputs* are provided through the `return` keyword.
     
 5. Consider:
+
 ```
 def cube(x):
     answer = x * x * x
     return answer
 ```
+Then:
     * a) This function computes the cube of a number and return its value.
     * b) `print(cube(y))`.
     * c) Because `answer` from the function definition is local to that function, while `answer` from outside the function is another different variable.
