@@ -4,6 +4,8 @@ This repository contains my solutions to the exercises and answers to the practi
 
 **[Python Programming: An Introduction To Computer Science](https://fbeedle.com/our-books/23-python-programming-an-introduction-to-computer-science-3rd-ed-9781590282755.html) by John Zelle. 3rd Edition.**
 
+![johnzellebook](/johnzellebook.jpeg)
+
 If you have any suggestions or corrections, you can [file an issue](https://github.com/carlosbionic/CarlosPythonZelle/issues).
 
 * [x] [Chapter 1 - Computers and Programs](https://github.com/carlosbionic/CarlosPythonZelle/tree/main/Chapter%201)
