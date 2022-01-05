@@ -14,7 +14,7 @@ If you have any suggestions or corrections, you can [file an issue](https://gith
 * [x] [Chapter 4 - Objects and Graphics](https://github.com/carlosbionic/CarlosPythonZelle/tree/main/Chapter%204)
 * [x] [Chapter 5 - Sequences: Strings, Lists, and Files](https://github.com/carlosbionic/CarlosPythonZelle/tree/main/Chapter%205)
 * [x] [Chapter 6 - Defining Functions](https://github.com/carlosbionic/CarlosPythonZelle/tree/main/Chapter%206)
-* [ ] [Chapter 7 - Decision Structures](https://github.com/carlosbionic/CarlosPythonZelle/tree/main/Chapter%207)
+* [x] [Chapter 7 - Decision Structures](https://github.com/carlosbionic/CarlosPythonZelle/tree/main/Chapter%207)
 * [ ] [Chapter 8 - Loop Structures and Booleans](https://github.com/carlosbionic/CarlosPythonZelle/tree/main/Chapter%208)
 * [ ] [Chapter 9 - Simulation and Design](https://github.com/carlosbionic/CarlosPythonZelle/tree/main/Chapter%209)
 * [ ] [Chapter 10 - Defining Classes](https://github.com/carlosbionic/CarlosPythonZelle/tree/main/Chapter%2010)
