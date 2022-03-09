@@ -25,7 +25,7 @@ def getInputs():
 
 def simNGames(n, probA, probB):
     # Simulates n games of racquetball between players whose
-    #    abilities are represented by the probability of winning a serve.
+    # abilities are represented by the probability of winning a serve.
     # Returns number of wins for A and B
     winsA = winsB = 0
     for i in range(n):
@@ -38,7 +38,7 @@ def simNGames(n, probA, probB):
 
 def simOneGame(probA, probB):
     # Simulates a single game or racquetball between players whose
-    #    abilities are represented by the probability of winning a serve.
+    # abilities are represented by the probability of winning a serve.
     # Returns final scores for A and B
     serving = "A"
     scoreA = 0
