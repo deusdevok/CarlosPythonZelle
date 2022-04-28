@@ -31,7 +31,7 @@
 1. (page 324). Instance variables live in objects. They can be used to remember the state of an object. They can be referred to again in other methods (using dot notation). Regular function variables values disappear once the function terminates.
 
 2. Explain in terms of actual code:
-3. 
+
 	a) **method**: a method is a function that lives in an object. It is a function inside a class. It can be executed using dot notation.
 
 	b) **instance variable**: a variable that live in an object. It can be accessed using dot notation.
