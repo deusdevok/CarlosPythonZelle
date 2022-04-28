@@ -31,16 +31,21 @@
 1. (page 324). Instance variables live in objects. They can be used to remember the state of an object. They can be referred to again in other methods (using dot notation). Regular function variables values disappear once the function terminates.
 
 2. Explain in terms of actual code:
+
 	a) **method**: a method is a function that lives in an object. It is a function inside a class. It can be executed using dot notation.
+
 	b) **instance variable**: a variable that live in an object. It can be accessed using dot notation.
 		`self.value = 5`
 		*value* is the instance variable.
+	
 	c) **constructor**: the *__init__* method. This is called to initialize a new instance of a class. Provides initial values for the instance variables of the object.
+	
 	d) **accessor**: a method that *returns* a value.
 		```
 		def getValue(self):
 			return self.value
 		```
+	
 	e) **mutator**: a method that *changes* the values of instance variables.
 		```
 		def editValue(self):
