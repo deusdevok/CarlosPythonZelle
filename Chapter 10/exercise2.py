@@ -9,7 +9,7 @@ def main():
 	lines = chars.split('\n')
 	numbers = list(map(int, lines))
 
-	win = GraphWin("Exercise 16", 640, 480)
+	win = GraphWin("Exercise 2", 640, 480)
 
 	mainButton = Button(win, Point(320, 240), 150, 30, "Start")
 	mainButton.activate()
