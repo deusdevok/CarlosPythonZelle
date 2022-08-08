@@ -25,3 +25,33 @@ class Student:
         # qpoints (quality points): grade points * credit hours
         self.qpoints += gradePoint*credits
         self.hours += credits
+
+    def addLetterGrade(self, gradeLetter, credits):
+        '''
+        gradeLetter: grade, A, B, C, etc (string)
+        credits: number of credit hours for the class (float)
+        '''
+        letter = gradeLetter[0].upper()
+        sign = gradeLetter[1]
+
+        points = 0.0
+
+        if letter == 'A':
+            points = 4.0
+        elif letter == 'B':
+            points = 3.0
+        elif letter == 'C':
+            points = 2.0
+        elif letter == 'D':
+            points = 1.0
+        else:
+            points = 0.0
+
+        if sign == '+':
+            points += .33
+        elif sign == '-':
+            points -= .33
+
+        self.qpoints += points*credits
+
+        self.hours += credits
