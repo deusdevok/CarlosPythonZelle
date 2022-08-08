@@ -5,14 +5,14 @@ aStudent = Student("Carlos", 0, 0)
 
 while(True):
     
-    inputFromUser = input('Enter grade points and credit hours (separated by a space. Q to quit): ')
+    inputFromUser = input('Enter grade letter points (A, A-, B, C, D) and credit hours (separated by a space, Q to quit): ')
 
     if inputFromUser.lower() == 'q':
         print('Thank you.')
         break
 
     gradePoint, credits = inputFromUser.split(' ')
-    aStudent.addGrade(float(gradePoint), float(credits))
+    aStudent.addLetterGrade(gradePoint, float(credits))
 
 
 print('Student {} has a gpa of {}'.format(aStudent.getName(), aStudent.gpa()))
