@@ -9,7 +9,7 @@
 5. False. Is called an object.
 6. True.
 7. False. A docstring is a special type of comment, used for documenting methods or functions.
-8. False.
+8. False. This happens in regular local function variables, the values disappear once the function terminates.
 9. False. One or two underscores are used to make methods unaccesible.
 10. True.
 
@@ -28,13 +28,13 @@
 
 ## Discussion
 
-1. (page 324). Instance variables live in objects. They can be used to remember the state of an object. They can be referred to again in other methods (using dot notation). Regular function variables values disappear once the function terminates.
+1. (page 324). Instance variables live in objects. They can be used to remember the state of an object. They can be referred to again in other methods (using dot notation). Regular function variables values disappear once the function terminates, as opposed to instance variables in objects.
 
 2. Explain in terms of actual code:
 
 	a) **method**: a method is a function that lives in an object. It is a function inside a class. It can be executed using dot notation.
 
-	b) **instance variable**: a variable that live in an object. It can be accessed using dot notation.
+	b) **instance variable**: a variable that lives in an object. It can be accessed using dot notation.
 		`self.value = 5`
 		*value* is the instance variable.
 	
@@ -46,7 +46,7 @@
 			return self.value
 		```
 	
-	e) **mutator**: a method that *changes* the values of instance variables.
+	e) **mutator**: a method that *changes* the values of instance variables, without returning anything (returns `None`).
 		```
 		def editValue(self):
 			self.value = randrange(1,9)

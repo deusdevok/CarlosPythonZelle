@@ -12,11 +12,13 @@ def main():
     buttonTwo = Button(win, Point(320, 240), w, h, 'Door 2')
     buttonThree = Button(win, Point(520, 240), w, h, 'Door 3')
 
-    buttonPlayAgain = Button(win, Point(120, 420), w, h, 'Play Again')
+    buttonPlayAgain = Button(win, Point(120, 420), w, h, 'Play Again') # Initially inactive by default
     buttonQuit = Button(win, Point(520, 420), w, h, 'Quit')
 
     messageIntro = Text(Point(320, 100), 'Welcome to Three Button Monte Game!\nPick a door, try to guess.')
     messageIntro.draw(win)
+
+    wins, losses = 0, 0
 
     while True:
         buttonQuit.activate()
@@ -26,15 +28,14 @@ def main():
 
         pt = win.getMouse()
 
-        if buttonQuit.clicked(pt):
-            win.close()
-            break        
-
-        while not any([buttonOne.clicked(pt), buttonTwo.clicked(pt), buttonThree.clicked(pt)]):
+        while not any([buttonOne.clicked(pt), buttonTwo.clicked(pt), buttonThree.clicked(pt), buttonQuit.clicked(pt)]):
             pt = win.getMouse()
 
+        if buttonQuit.clicked(pt):
+            win.close()
+            break 
         
-
+        # At this point, one of the three doors was chosen by the user
         if buttonOne.clicked(pt):
             b = 1
         elif buttonTwo.clicked(pt):
@@ -45,14 +46,27 @@ def main():
         r = random.choice([1, 2, 3])
         if b == r:
             result = 'You Won !! Good for you'
+            wins += 1
         else:
             result = 'You Lost. Deal with it ...'
+            losses += 1
+
+        
 
         buttonOne.deactivate()
         buttonTwo.deactivate()
         buttonThree.deactivate()
 
         message = Text(Point(320, 340), 'You picked door number {}\n{}\nThe correct door was {}'.format(b, result, r))
+
+        try:
+            winsAndLosses.undraw()
+        except:
+            pass
+        
+        if wins > 0 or losses > 0:
+            winsAndLosses = Text(Point(320, 420), 'Wins: {}\n\nLosses: {}'.format(wins, losses))
+            winsAndLosses.draw(win)
 
         message.draw(win)
 

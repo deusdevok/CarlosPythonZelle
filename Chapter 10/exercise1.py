@@ -8,6 +8,7 @@ class Projectile:
         self.xpos = 0.0
         self.ypos = height
         theta = radians(angle)
+        print('theta:', theta)
         self.xvel = velocity * cos(theta)
         self.yvel = velocity * sin(theta)
 
@@ -23,8 +24,10 @@ class Projectile:
     def getX(self):
         return self.xpos
 
-    def getYmax(self, height):
-        return height + (self.yvel)**2/(2*9.8)
+    def getYmax(self, angle, vel, height):
+        # vel is the initial velocity. Use this instead of self.yvel because the later is updated
+        yvel_init = vel*sin(radians(angle))
+        return height + (yvel_init**2)/(2*9.8)
 
 def getInputs():
     a = float(input("Enter the launch angle (in degrees): "))
@@ -39,7 +42,7 @@ def main():
     while cball.getY() >= 0:
         cball.update(time)        
     print("\nDistance traveled: {0:0.1f} meters.".format(cball.xpos))
-    print("\nMaximum height achieved by the cannonball: {0:0.1f} meters.".format(cball.getYmax(h0)))
+    print("\nMaximum height achieved by the cannonball: {0:0.1f} meters.".format(cball.getYmax(angle, vel, h0)))
 
 if __name__ == "__main__": 
     main()
